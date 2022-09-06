@@ -15,10 +15,10 @@ runtime = boto3.client("runtime.sagemaker")
 
 IMAGE_URL = "https://aws-mlops-samples.s3-eu-west-1.amazonaws.com/mnist_output_10.png"
 test_file = "test.jpg"
-wget.download(
-    IMAGE_URL,
-    test_file,
-)
+# wget.download(
+#     IMAGE_URL,
+#     test_file,
+# )
 
 image = imread(test_file, IMREAD_GRAYSCALE)
 image = resize(image, (28, 28))
